@@ -1,0 +1,102 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Guerrilla&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+   scroll-behavior: smooth;
+}
+
+body{
+   /* font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal; */
+   @apply bg-blue-50 text-neutral-700 scroll-smooth
+}
+
+.scrollbar-none::-webkit-scrollbar{
+   display: none;
+}
+.enhanced-cursor-dot {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 15px;
+   height: 15px;
+   background: radial-gradient(circle, rgba(0, 255, 0, 0.7) 0%, rgba(0, 255, 0, 0.1) 80%);
+   border-radius: 50%;
+   pointer-events: none;
+   z-index: 9999;
+   mix-blend-mode: difference; /* Optional for cool blending */
+ }
+ button {
+   cursor: grab;
+ }
+ /* Add this CSS in your global styles (App.css or index.css) */
+
+.react-hot-toast {
+   top: 1rem !important;
+   left: 50% !important;
+   transform: translateX(-50%) !important;
+   bottom: auto !important;
+   right: auto !important;
+   position: fixed !important;
+   z-index: 9999 !important;
+ }
+ 
+ 
+ .no-scrollbar::-webkit-scrollbar {
+   display: none;
+ }
+ .no-scrollbar {
+   -ms-overflow-style: none;  /* IE and Edge */
+   scrollbar-width: none;     /* Firefox */
+ }
+ /* Hide scrollbar on mobile devices */
+@media (max-width: 768px) {
+  /* For the whole page scroll */
+  html, body {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+
+  html::-webkit-scrollbar, 
+  body::-webkit-scrollbar {
+    display: none;             /* Chrome, Safari, Opera */
+  }
+}
+
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+
+/* category home page css */
+@media (max-width: 640px) {
+  .first-row-mobile .flex.flex-col.items-center.justify-between.text-center {
+    /* padding: 0 !important;
+    margin: 0 !important; */
+    height: 90px !important; /* height kam kiya mobile first row ke items ka */
+  }
+  .secoend-row-mobile .flex.flex-col.items-center.justify-between.text-center {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 100px !important; /* height kam kiya mobile first row ke items ka */
+  }
+  .first-row-mobile .flex.flex-col.items-center.justify-between.text-center p {
+    /* margin: 0 !important;
+    padding: 0 !important; */
+  }
+  .first-row-mobile .flex.flex-col.items-center.justify-between.text-center img {
+    /* margin: 0 !important;
+    padding: 0 !important; */
+  }
+}
