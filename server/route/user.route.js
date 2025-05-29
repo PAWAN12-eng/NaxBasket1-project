@@ -59,10 +59,10 @@ userouter.post('/search-product',searchProduct)
 
 
 // add to cart
-userouter.post('/create',auth,addToCart)
-userouter.get('/get-cartProduct',auth,getCartItemContorller)
-userouter.put('/update-qty',auth,updateCartItemQtyController)
-userouter.delete('/delete-cartItem',auth,deleteCartItmeQtyController)
+userouter.post('/create',addToCart)
+userouter.get('/get-cartProduct',getCartItemContorller)
+userouter.put('/update-qty',updateCartItemQtyController)
+userouter.delete('/delete-cartItem',deleteCartItmeQtyController)
 
 // address
 userouter.get("/user-addresses", auth, getUserAddresses);
