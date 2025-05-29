@@ -139,7 +139,7 @@ const Home = () => {
       </div>
 
       {/* category */}
-      <div className="bg-transparent container mx-auto px-1">
+      {/* <div className="bg-transparent container mx-auto px-1 grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-9 gap-1 md:gap-3"> */}
       {loadingCategory
         ? // your loading skeleton stays as is
           new Array(14).fill(null).map((_, index) => (
@@ -159,7 +159,7 @@ const Home = () => {
         : splitCategoryDataForMobile(categoryData).map((row, rowIndex) => (
             <div
               key={`row-${rowIndex}`}
-              className={`grid gap-1 md:gap-3 ${
+              className={`grid gap-0 md:gap-3 lg:px-0 px-2 ${
                 rowIndex === 0
                   ? "grid-cols-2 first-row-mobile"
                   : rowIndex === 1
@@ -194,7 +194,7 @@ const Home = () => {
             </div>
           ))}
 
-      </div>
+      {/* </div> */}
 
       <RecentlyViewed />
 
