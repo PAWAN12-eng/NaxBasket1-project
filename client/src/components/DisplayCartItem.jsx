@@ -24,7 +24,7 @@ const DisplayCartItem = ({ close }) => {
       }
       return;
     }
-    toast("Please Login");
+    toast.error("Please Login");
   };
 
   useEffect(() => {
