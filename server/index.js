@@ -13,9 +13,14 @@ import userouter from './route/user.route.js';
 import uploadRouter from './route/upload.route.js';
 
 const app = express();
+const allowedOrigins = [
+    'http://localhost:5173',                      
+    'https://nax-basket1-project.vercel.app'       
+];
+
 app.use(cors({
     credentials: true,
-    origin: 5173
+    origin: allowedOrigins,
 }));
 app.use(express.json());
 app.use(cookieParser());
