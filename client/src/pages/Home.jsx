@@ -139,7 +139,7 @@ const Home = () => {
       </div>
 
       {/* category */}
-      {/* <div className="bg-transparent container mx-auto px-1 grid grid-cols-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-9 gap-1 md:gap-3"> */}
+      <div className="bg-transparent container mx-auto px-1">
       {loadingCategory
         ? // your loading skeleton stays as is
           new Array(14).fill(null).map((_, index) => (
@@ -194,7 +194,7 @@ const Home = () => {
             </div>
           ))}
 
-      {/* </div> */}
+      </div>
 
       <RecentlyViewed />
 
